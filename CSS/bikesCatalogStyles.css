@@ -1,0 +1,141 @@
+/* Bikes Catalog - Styles */
+
+/* Structure A */
+
+* {
+  font-family: 'Calibri', arial;
+  padding: 0px;
+  margin: 0px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: rgb(0, 0, 0);
+  --blue: rgb(118, 159, 248);
+  --darkBlue: rgb(42, 96, 214);
+  --white: rgb(255, 255, 255);
+}
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+header {
+  height: 505px;
+  width: 100%;
+  background: var(--blue);
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 120px;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul li {
+  list-style: none;
+  cursor: pointer;
+  padding: 12px;
+}
+
+nav ul li a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: var(--white);
+  transition: 0.4s;
+}
+
+nav ul button {
+  padding: 9px 42px;
+  margin-left: 15px;
+  font-weight: bold;
+  border: 1px solid var(--black);
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+nav ul button:hover {
+  color: var(--white);
+  border-color: var(--white);
+  transition: color 0.4s;
+}
+
+.watermark {
+  color: var(--black);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.content {
+  display: flex;
+  margin: 0 auto;
+  padding: 12px;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 1000px;
+}
+
+.content .headerBlock {
+  padding: 11px;
+  position: relative;
+  background: var(--darkBlue);
+  border-radius: 9px;
+  min-width: 300px;
+  max-width: 1000px;
+  height: 440px;
+  box-shadow: 1px 0px 10px 0px rgba(255, 255, 255, 0.511);
+  -moz-box-shadow: 1px 0px 10px 0px rgba(255, 255, 255, 0.511);
+  -webkit-box-shadow: 1px 0px 10px 0px rgba(255, 255, 255, 0.511);
+  z-index: 11px;
+}
+
+nav img {
+  width: 8%;
+}
+
+.headerBlock img {
+  position: absolute;
+  width: 150%;
+  bottom: 30%;
+  right: 2%;
+  left: 70%;
+}
+
+.headerBlock .text {
+  position: absolute;
+  left: 16%;
+  bottom: 25%;
+}
+
+.headerBlock .text p {
+  text-align: right;
+  transform: translate(-18px);
+  transition: transform 0.5s;
+}
+
+.headerBlock h2,
+p {
+  color: rgb(255, 255, 255);
+  text-align: right;
+  margin-bottom: 20px;
+  transform: translateX(-18px);
+  transition: transform 0.5s;
+}
+
+
+/* Structure B */
