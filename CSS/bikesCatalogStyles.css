@@ -1,6 +1,6 @@
 /* Bikes Catalog - Styles */
 
-/* Structure A */
+/* Structure A - "First parts" */
 
 * {
   font-family: 'Calibri', arial;
@@ -14,7 +14,13 @@
   --black: rgb(0, 0, 0);
   --blue: rgb(118, 159, 248);
   --darkBlue: rgb(42, 96, 214);
+  --moonBlue: rgb(4, 4, 107);
+  --diamondBlue: rgb(1, 129, 176);
+  --lightBlue: rgb(99, 184, 245);
+  --shinyBlue: rgb(134, 225, 248);
   --white: rgb(255, 255, 255);
+  --green: rgb(28, 194, 28);
+  --grey: rgb(238, 238, 238);
 }
 
 html,
@@ -117,6 +123,7 @@ nav img {
 }
 
 .headerBlock .text {
+  color: rgb(255, 255, 255);
   position: absolute;
   left: 16%;
   bottom: 25%;
@@ -128,14 +135,239 @@ nav img {
   transition: transform 0.5s;
 }
 
-.headerBlock h2,
-p {
-  color: rgb(255, 255, 255);
+.headerBlock {
   text-align: right;
   margin-bottom: 20px;
   transform: translateX(-18px);
   transition: transform 0.5s;
 }
 
+/* Structure B - "Section" item*/
 
-/* Structure B */
+section .catalogDivision {
+  padding: 100px;
+  width: 100vw;
+}
+
+section .cardFilter {
+  height: 155px;
+  width: 965px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 9px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  background: var(--moonBlue);
+}
+
+.searchInput {
+  border: none;
+  border-radius: 3px 0px 0px 3px;
+  text-indent: 9px;
+  height: 45px;
+  width: 710px;
+}
+
+.searchButton {
+  height: 60px;
+  border-radius: 0px 3px 3px 0px;
+  width: 100px;
+  font-size: 1em;
+  transition: 0.3s ease;
+  background: var(--diamondBlue);
+  color: var(--white);
+}
+
+.searchButton:hover {
+  background: var(--lightBlue);
+  color: var(--black);
+  cursor: pointer;
+}
+
+.catalogWrapperTitle {
+  padding-bottom: 15px;
+  margin-top: 140px;
+}
+
+section .cardItem {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  background: var(--blue);
+  border-radius: 9px;
+  height: 410px;
+}
+
+.cardItem h3 {
+  width: 90%;
+}
+
+.cardItem p {
+  font-style: bold;
+  width: 90%;
+  color: var(--black);
+}
+
+.cardItem img {
+  width: 80%;
+}
+
+.cardItem button {
+  height: 35px;
+  border-radius: 4px 9px 4px 9px;
+  width: 100px;
+  font-size: 1em;
+  transition: 0.3s ease;
+  background: var(--moonBlue);
+  color: var(--white);
+}
+
+.cardItem button:hover {
+  background: var(--shinyBlue);
+  box-shadow: 2px 2px 12px var(--white);
+  color: var(--black);
+  cursor: pointer;
+}
+
+section .cardWrapper {
+  display: grid;
+  height: 100%;
+  max-width: 1000px;
+  padding-top: 55px;
+  grid-gap: 31px;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 45%;
+}
+
+/* Structure C - "About" item*/
+
+.aboutDivision {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding: 55px 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 610px;
+  min-width: 300px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 11px;
+  z-index: 10;
+  background: var(--grey);
+  border-radius: 9px;
+}
+
+.leftItem {
+  min-width: 300px;
+  width: 80%;
+  height: 100%;
+  border-radius: 9px;
+  background: var(--diamondBlue);
+}
+
+.rightItem {
+  display: flex;
+  height: 100%;
+  width: 70%;
+  padding-top: 10%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.rightItem h3 {
+  width: 90%;
+  margin-bottom: 25px;
+  text-align: right;
+}
+
+.rightItem p {
+  font-size: 1em;
+  max-width: 90%;
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+/* Structure D - "Features" item*/
+
+.featuresDivision {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  padding: 55px 0px;
+  background: var(--grey);
+}
+
+.featuesWrapperTitle {
+  padding: 18px 0px;
+}
+
+.featuresBlock {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  min-width: 300px;
+  max-width: 1000px;
+  height: 600px;
+  width: 1000px;
+  margin: 0 auto;
+  border-radius: 9px;
+  z-index: 10;
+  grid-gap: 32px;
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 410px;
+  height: 160px;
+  border: 1px solid var(--grey);
+  border-radius: 3px;
+}
+
+.featuresText {
+  max-width: 65%;
+  margin: 6px;
+}
+
+.featureItem img {
+  height: 70px;
+  width: 70px;
+}
+
+/* Last structure - "Footer" item */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--diamondBlue);
+}
+
+.footerItem {
+  margin-top: 200px;
+  color: var(--black);
+}
