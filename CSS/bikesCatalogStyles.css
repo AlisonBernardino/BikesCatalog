@@ -123,7 +123,7 @@ nav img {
 }
 
 .headerBlock .text {
-  color: rgb(255, 255, 255);
+  color: var(--white);
   position: absolute;
   left: 16%;
   bottom: 25%;
@@ -360,14 +360,162 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 10px;
+  width: 100%;
 }
 
 footer a {
   text-decoration: none;
-  color: var(--diamondBlue);
+  color: var(--white);
 }
 
 .footerItem {
-  margin-top: 200px;
+  margin-top: 100px;
   color: var(--black);
+}
+
+footer .footerMainClass {
+  width: 100%;
+  padding: 10px 10px;
+  background: var(--blue);
+}
+
+.footerLinksContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 21px;
+  min-width: 300px;
+  max-width: 1000px;
+}
+
+.footerCompany,
+.footerRental,
+.footerContact,
+.footerSocial {
+  min-height: 110px;
+  height: 100%;
+  color: var(--white);
+}
+
+.footerLinksContent {
+  margin-bottom: 9px;
+}
+
+.footerLinksContent h3 {
+  margin-bottom: 14px;
+}
+
+.facebookLogo {
+  height: 45px;
+  width: 45px;
+}
+
+.instagramLogo {
+  height: 35px;
+  width: 35px;
+}
+
+.BCWMark {
+  background: var(--moonBlue);
+  color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 100%;
+}
+
+/* Responsivity settings */
+
+@media (max-width: 576px) {
+  /* "Header" division */
+  nav ul li {
+    display: none;
+  }
+
+  .headerBlock img {
+    /* position: absolute; */
+    top: -300%;
+    left: 10%;
+    /* right: 85%; */
+    width: 100%;
+  }
+
+  .headerBlock .text {
+    position: absolute;
+    left: 5px;
+    right: 35px;
+    bottom: 15%;
+  }
+
+  /* "Section" division */
+
+  section .cardFilter {
+    height: 120px;
+    width: 420px;
+    padding: 0px 11px;
+    font-size: 13px;
+  }
+
+  .searchInput {
+    height: 40px;
+    width: 50px;
+    min-width: 245px;
+    max-width: 700px;
+  }
+
+  .searchButton {
+    min-width: 85px;
+    max-width: 155px;
+  }
+
+  /* "About" division */
+  .aboutDivision {
+    margin-top: 110px;
+  }
+
+  .aboutContent {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .leftItem {
+    display: none;
+  }
+
+  .rightItem {
+    width: 91%;
+  }
+
+  .rightItem p {
+    text-align: left;
+    margin: 0px;
+    width: 100%;
+  }
+
+  /* "Features" division */
+  .featuresDivision {
+    height: 100%;
+  }
+
+  .featuresBlock {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  /* "Footer" division */
+  footer {
+    height: 100%;
+  }
+
+  footer .footerMainClass {
+    height: 100%;
+  }
+
+  .footerLinksContent {
+    flex-direction: column;
+    padding-left: 11%;
+  }
 }
